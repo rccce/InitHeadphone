@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>InitHeadphone</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.InitHeadphone</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>InitHeadphone</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>InitHeadphone</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>local.InitHeadphone</string>
+			<key>Effect</key>
+			<integer>1</integer>
+			<key>IOClass</key>
+			<string>InitHeadphone</string>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>VoodooSMBUS Slave Device Address</key>
+				<integer>115</integer>
+			</dict>
+			<key>IOProviderClass</key>
+			<string>VoodooSMBusDeviceNub</string>
+		</dict>
+		<key>InitHeadphoneLoader</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>local.InitHeadphone</string>
+			<key>IOClass</key>
+			<string>InitHeadphoneLoader</string>
+			<key>IOMatchCategory</key>
+			<string>InitHeadphoneLoader</string>
+			<key>IOProviderClass</key>
+			<string>VoodooSMBusControllerDriver</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Amplifier sequence from init-headphone by Unrud (GPL-3.0-or-later)</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kpi.iokit</key>
+		<string>15.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>15.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>15.0</string>
+		<key>de.leo-labs.VoodooSMBus</key>
+		<string>3.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
